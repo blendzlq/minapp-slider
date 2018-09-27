@@ -1,0 +1,22 @@
+<view class="container">
+  <view class="curriculum" bind:touchstart="handletouchtart" catchtouchmove='handletouchmove' bind:touchend='handletouchend'>
+    <view class="scroll-view">
+      <view class="arrow-up">
+        <view bind:tap="scrollPre">
+          <image mode='widthFix' src="/pages/assets/images/laboratory-arrow-up.png" alt=""></image>
+        </view>
+      </view>
+      <view class="content">
+        <view wx:for="{{swiperList}}" bind:tap="scrollItemTo" data-link="{{item.link}}" wx:key="index" class="scroll-item" style='{{item.style}}'>
+          123123123
+        </view>
+      </view>
+      <view class="arrow-down">
+        <view bind:tap="scrollNext">
+          <image mode='widthFix' src="/pages/assets/images/laboratory-arrow-down.png"></image>
+        </view>
+      </view>
+    </view>
+  </view>
+</view>
+<image class="background" src="../../assets/images/recommend-bg.png"></image>
